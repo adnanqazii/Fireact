@@ -1,21 +1,21 @@
-importScripts('https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js');
-importScripts('https://www.gstatic.com/firebasejs/7.13.1/firebase-messaging.js');
+importScripts('https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js');
+importScripts('https://www.gstatic.com/firebasejs/7.19.0/firebase-messaging.js');
 
-const config = {
-  apiKey: 'AIzaSyD6n58WMRzrcXxMnDGvzttxk4lqNu0MZbI',
-  authDomain: 'push-notifications-article.firebaseapp.com',
-  databaseURL: 'https://push-notifications-article.firebaseio.com',
-  projectId: 'push-notifications-article',
-  storageBucket: 'push-notifications-article.appspot.com',
-  messagingSenderId: '607164875245',
-  appId: '1:607164875245:web:ac22e68ecfd336b8ad67e4',
-
+var config = {
+  apiKey: "AIzaSyBhmRJRNi1sw62jGPJ8pUu4Eq_1U_AlnHs",
+  authDomain: "firereact-51904.firebaseapp.com",
+  databaseURL: "https://firereact-51904.firebaseio.com",
+  projectId: "firereact-51904",
+  storageBucket: "firereact-51904.appspot.com",
+  messagingSenderId: "505841219537",
+  appId: "1:505841219537:web:1d5d466e05263bc90952f0"
 };
 
 firebase.initializeApp(config);
 const messaging = firebase.messaging();
 
 messaging.setBackgroundMessageHandler(function(payload) {
+  
   console.log('[firebase-messaging-sw.js] Received background message ', payload);
 
   const notificationTitle = payload.data.title;
